@@ -22,7 +22,7 @@ def get_filters():
     cities = list(CITY_DATA.keys())  # Retrieve city names from CITY_DATA dictionary
     
     while True:
-        city = input("\nWhich city would you like to look at? (Chicago/New York City/Washington)\n").lower()
+        city = input("\nWhich city data would you like to look at? (Chicago/New York City/Washington)\n").lower()
         if city in cities:
             break
         else:
