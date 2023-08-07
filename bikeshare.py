@@ -22,7 +22,7 @@ def get_filters():
     cities = list(CITY_DATA.keys())  # Retrieve city names from CITY_DATA dictionary
     
     while True:
-        city = input("\nWhich city would you like to look at? (Chicago/New York City/Washington)\n").lower()
+        city = input("\nWhich city data would you like to look at? (Chicago/New York City/Washington)\n").lower()
         if city in cities:
             break
         else:
@@ -121,7 +121,7 @@ def station_stats(df):
 
     # Display most commonly used start station
     popular_start_station = df['Start Station'].mode()[0]
-    print('The most common start station is', popular_start_station)
+    print('The most common starting station is', popular_start_station)
 
     # Display most commonly used end station
     popular_end_station = df['End Station'].mode()[0]
@@ -149,7 +149,7 @@ def trip_duration_stats(df):
 
     # Display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
-    print('\nMean travel time is', mean_travel_time, 'minutes')
+    print('\nAverage travel time is', mean_travel_time, 'minutes')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
